@@ -1,8 +1,12 @@
 # Mail Merge Question Bank
 
+[Get the latest version online.](https://github.com/groton-school/mail-merge-question-bank/archive/refs/heads/main.zip)
+
 ## How to Use
 
 `Question Bank.xlsx` represents the catalog of all available multiple choice questions. Every time the file is saved, the random ordering of both questions and answer options is updated by Excel.
+
+`Test Generator.docx` uses the question bank to generate an actual, formatted test. If changes are made in the spreadsheet, it must be saved and the `Test Generator` must be closed and re-opened.
 
 
 ## In `Question Bank.xlsx`
@@ -18,6 +22,31 @@ Indicate which answer is correct in the `Correct` column by entering the number 
 Add subject tags to in the `Tags` column. Subject tags should be all lower case, separated by commas.
 
 _If the <span style="color: gray">gray text</span> columns do not populate as you go, you may need to "fill down": select the last row of populated gray text, position the mouse at the bottom-right corner of the selection, and then drag the box down (a lot) more rows to fill in those rows with the formulas necessary._
+
+_Some more complicated formatting can be tricky in Excel. Some quick hints:_
+
+- _Line breaks can be entered **within** a cell by pressing <kbd>Shift</kbd><kbd>Command</kbd><kbd>Return</kbd>_
+- _<kbd>Tab</kbd> characters can be entered by copying-and-pasting them from another app (e.g. Word). Disconcertingly, they will not be shown **except** when you are editing that cell, but they will be stored and show up in the Test Generator._
+
+  > For example, a question that looks like this:
+  >
+  >> Which of the following is true?
+  >>
+  >>> I. Space is a vaccuum.
+  >>>
+  >>> II. Vaccuums are in space.
+  >>>
+  >>> III. The Ort Cloud is a dust filter.
+  >
+  > ...might be typed into Excel thus (assuming that a <kbd>Tab</kbd> was already in the clipboard):
+  >
+  >> Which of the following is true?<kbd>Shift</kbd><kbd>Command</kbd><kbd>Return</kbd>
+  >>
+  >> <kbd>Command</kbd><kbd>V</kbd>I. Space is a vaccuum.<kbd>Shift</kbd><kbd>Command</kbd><kbd>Return</kbd>
+  >>
+  >> <kbd>Command</kbd><kbd>V</kbd>II. Vaccuums are in space.<kbd>Shift</kbd><kbd>Command</kbd><kbd>Return</kbd>
+  >>
+  >> <kbd>Command</kbd><kbd>V</kbd>III. The Ort Cloud is a dust filter.
 
 #### Manually select a question
 
@@ -38,17 +67,33 @@ You may delete the entire row (right-click on the row the number).
 
 In the <span style="background: lightgoldenrodyellow;">yellow zone</span> of the `Select Tags` column, you can enter up to 20 subject tags that will be automatically selected for inclusion in the test, one tag per row.
 
+#### Identify "All of the above" questions
+
+One style of question -- multiple options, followed by the option "all of the above" -- is best randomized with the "all of the above" coming consistently at the end of the list of options.
+
+You can maintain a list of "all of the above" equivalent options that will similarly be the consistently last option if they are given (last) in the list of options. Edit the <span style="background: lightgoldenrodyellow;">yellow zone</span> of the `All of the above` column to list all possible matches.
+
 ## In `Test Generator.docx`
 
 The `Test Generator.docx` file formats the selected questions for use in a test or answer key.
+
+> The first time you open `Test Generator.docx`, you may need to update the link to the `Question Bank.xlsx` file.
+>
+> <img src="docs/data-source.png" width="372"/>
+>
+> Click `Find Data Source...` and locate `Question Bank.xlsx` (probably in the same directory as `Test Generator.docx`).
 
 When you open the `Test Generator.docx`, Word will give you a warning about opening the question bank Excel file:
 
 <img src="docs/warning.png" width="372"/>
 
-Click <kbd>Yes</kbd>.
+Click `Yes`...
 
-When the file opens, do **not** play with the formatting (there are a lot of Word field codes hidden in there that you don't want to scramble).
+<img src="docs/worksheet.png" width="389"/>
+
+...and then `OK` in the next dialog which should default to opening the `Question Bank`.
+
+When the file opens, do **not** play with the formatting (there are a lot of Word field codes hidden in there that you don't want to scramble). If you want to see all the field codes (useful if you _do_ want to play with formatting), press <kbd>Alt/Option</kbd><kbd>F9</kbd>
 
 Under the `Mailings` ribbon, you can...
 
