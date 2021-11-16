@@ -115,3 +115,12 @@ If you click on the `Filter Recipients` button in the ribbon, you can choose dif
 If you click on the `Filter Recipients` button in the ribbon and choose the `Sort Records` tab at the top of the window, you can alter the sort order of the questions. By default, the sort order is based on the randomization set in the `Random Order` colun of the question bank.
 
 <img src="docs/sort.png" width="922"/>
+
+## Adding Existing Tests to Bank
+
+Obviously, this can be a tricky conversion. `Import Existing Test.xlsx` operates on the assumption that your test is formatted something like [Sample Test.docx](https://docs.google.com/gview?url=https://github.com/groton-school/mail-merge-question-bank/blob/main/docs/Sample%20Test.docx%3fraw=true&embedded=true). The basic gist of how to do this is that you:
+
+  1. Copy and paste the multiple choice questions into the `Paste Test in Cell A1` worksheet of `Import Existing Test` (in cell A1 -- it will overflow down the worksheet and _that is what should happen_).
+  2. Flip over to the `Copy-Paste as VALUES into Bank` worksheet, select the now-organized questions and options and copy them to the clipboard.
+  3. In `Question Bank.xlsx`, position the cursor in the next available `Question` column, and then -- _this is important_ -- choose `Paste Values` from the `Paste` drop-down in the ribbon.
+  4. Laboriously sift through the results _in `Question Bank`_ and delete all of the `0` options that Excel has willfully added.
