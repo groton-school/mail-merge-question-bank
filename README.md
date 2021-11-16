@@ -1,6 +1,6 @@
 # Mail Merge Question Bank
 
-[Get the latest version online.](https://github.com/groton-school/mail-merge-question-bank/archive/refs/heads/main.zip)
+[Download the current version.](https://github.com/groton-school/mail-merge-question-bank/archive/refs/heads/main.zip)
 
 ## How to Use
 
